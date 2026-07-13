@@ -3,12 +3,17 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sude ❤️</title>
+
+<title>Bebegim ❤️</title>
 
 <style>
+*{
+box-sizing:border-box;
+}
+
 body{
 margin:0;
-background:linear-gradient(180deg,#090014,#1a0028);
+background:linear-gradient(180deg,#080014,#22002f);
 color:white;
 font-family:Arial,sans-serif;
 text-align:center;
@@ -16,114 +21,138 @@ overflow-x:hidden;
 }
 
 h1{
-margin-top:60px;
+margin-top:50px;
 font-size:55px;
-color:#ff5c8a;
-text-shadow:0 0 20px #ff5c8a;
+color:#ff6b9d;
+text-shadow:0 0 25px #ff6b9d;
 }
 
-p{
+.subtitle{
 font-size:20px;
-line-height:35px;
-padding:0 20px;
+opacity:.9;
 }
 
-.card{
-background:rgba(255,255,255,0.08);
-backdrop-filter:blur(10px);
-border-radius:25px;
-padding:25px;
-margin:35px auto;
-width:85%;
-max-width:600px;
-box-shadow:0 0 30px rgba(255,80,150,.4);
+.menu{
+margin:30px auto;
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:15px;
 }
 
 button{
 background:#ff4d88;
-border:none;
 color:white;
-padding:15px 30px;
+border:none;
+padding:14px 25px;
 border-radius:30px;
-font-size:18px;
+font-size:17px;
+cursor:pointer;
+box-shadow:0 0 15px #ff4d88;
+}
+
+button:hover{
+transform:scale(1.05);
+}
+
+.card{
+width:85%;
+max-width:600px;
+margin:25px auto;
+padding:25px;
+border-radius:25px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(10px);
+box-shadow:0 0 30px rgba(255,100,180,.3);
+}
+
+.hidden{
+display:none;
 }
 
 .heart{
 position:fixed;
-bottom:-20px;
+bottom:-30px;
+animation:kalp 8s linear infinite;
 font-size:25px;
-animation:up 8s linear infinite;
 }
 
-@keyframes up{
-from{transform:translateY(0);opacity:1;}
-to{transform:translateY(-110vh);opacity:0;}
+@keyframes kalp{
+0%{
+transform:translateY(0);
+opacity:1;
+}
+100%{
+transform:translateY(-110vh);
+opacity:0;
+}
 }
 
 .star{
 position:fixed;
-font-size:15px;
-animation:blink 3s infinite;
+animation:yildiz 3s infinite;
 }
 
-@keyframes blink{
-50%{opacity:.2;}
+@keyframes yildiz{
+50%{opacity:.3;}
 }
+
 </style>
 
 </head>
 
 <body>
 
-<h1>❤️ SUDE ❤️</h1>
+<h1>❤️ Sudemm Bebeğimmm❤️</h1>
+
+<p class="subtitle">
+Sadece senin için hazırlanmış küçük bir dünya ✨
+</p>
+
 
 <div class="menu">
-<button onclick="goster('soz')">💌 Sözler</button>
-<button onclick="goster('muzik')">🎵 Müzikler</button>
-<button onclick="goster('foto')">📸 Fotoğraflar</button>
+
+<button onclick="ac('soz')">
+💌 Sözler
+</button>
+
+<button onclick="ac('muzik')">
+🎵 Müzik
+</button>
+
+<button onclick="ac('foto')">
+📸 Fotoğraflar
+</button>
+
 </div>
+
+
 
 <div id="soz" class="card">
-<h2>💌 Sözler</h2>
-<p>
-Bazı insanlar hayatımıza girer ve her şeyi güzelleştirir...
-Bu sayfa sadece Sude için hazırlandı. ❤️
-</p>
-</div>
 
-<div id="muzik" class="card" style="display:none;">
-<h2>🎵 Müzikler</h2>
-
-<a href="https://open.spotify.com/playlist/3mfRoxPlQuxR2zzQYI03VC?si=cTXQXe42Q5OdlbSesMP_zQ&utm_source=copy-link&pi=Asvjhg2yTjeaa" target="_blank">
-<button>
-🎧 Sude'nin Şarkıları
-</button>
-</a>
-
-</div>
-
-<div id="foto" class="card" style="display:none;">
-<h2>📸 Fotoğraflar</h2>
-<p>
-Buraya özel fotoğraflar gelecek ❤️
-</p>
-</div>
-<div class="card">
 <h2>💌 Sana Bir Not</h2>
+
 <p>
-Her şarkıda biraz seni, her güzel anda biraz seni buluyorum.
-Umarım bu küçük sayfa yüzünde bir gülümseme oluşturur. ❤️
+Bazı insanlar hayatımıza gelir ve her şeyi güzelleştirir.
+Bu sayfa Sude için özel olarak hazırlandı. ❤️
 </p>
+
 </div>
 
 
-<div class="card">
-<h2>🎵 Müziklerimiz</h2>
+
+<div id="muzik" class="card hidden">
+
+<h2>🎵 Sude'nin Şarkıları</h2>
+
+<p>
+Birlikte dinlemek için hazırladığım liste ❤️
+</p>
 
 <a href="https://open.spotify.com/playlist/3mfRoxPlQuxR2zzQYI03VC?si=cTXQXe42Q5OdlbSesMP_zQ&utm_source=copy-link&pi=Asvjhg2yTjeaa" target="_blank">
 
 <button>
-🎧 Sude'nin Şarkıları
+Spotify Aç 🎧
 </button>
 
 </a>
@@ -131,31 +160,53 @@ Umarım bu küçük sayfa yüzünde bir gülümseme oluşturur. ❤️
 </div>
 
 
+
+<div id="foto" class="card hidden">
+
+<h2>📸 Fotoğraflar</h2>
+
+<p>
+Buraya özel fotoğraflar eklenecek ❤️
+</p>
+
+</div>
+
+
+
 <script>
+
+function ac(id){
+
+document.getElementById("soz").classList.add("hidden");
+document.getElementById("muzik").classList.add("hidden");
+document.getElementById("foto").classList.add("hidden");
+
+document.getElementById(id).classList.remove("hidden");
+
+}
+
+
 for(let i=0;i<25;i++){
-let h=document.createElement("div");
-h.className="heart";
-h.innerHTML="❤️";
-h.style.left=Math.random()*100+"%";
-h.style.animationDelay=Math.random()*8+"s";
-document.body.appendChild(h);
 
-let s=document.createElement("div");
-s.className="star";
-s.innerHTML="✨";
-s.style.left=Math.random()*100+"%";
-s.style.top=Math.random()*100+"%";
-document.body.appendChild(s);
-}
-</script>
-<script>
-function goster(id){
-document.getElementById("soz").style.display="none";
-document.getElementById("muzik").style.display="none";
-document.getElementById("foto").style.display="none";
+let kalp=document.createElement("div");
+kalp.className="heart";
+kalp.innerHTML="❤️";
+kalp.style.left=Math.random()*100+"%";
+kalp.style.animationDelay=Math.random()*8+"s";
+document.body.appendChild(kalp);
 
-document.getElementById(id).style.display="block";
+
+let yildiz=document.createElement("div");
+yildiz.className="star";
+yildiz.innerHTML="✨";
+yildiz.style.left=Math.random()*100+"%";
+yildiz.style.top=Math.random()*100+"%";
+document.body.appendChild(yildiz);
+
 }
+
 </script>
+
+
 </body>
 </html>
