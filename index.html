@@ -7,48 +7,67 @@
 
 <style>
 body{
-    margin:0;
-    background:linear-gradient(180deg,#0f0f0f,#1b1b1b);
-    color:white;
-    font-family:Arial,sans-serif;
-    text-align:center;
+margin:0;
+background:linear-gradient(180deg,#090014,#1a0028);
+color:white;
+font-family:Arial,sans-serif;
+text-align:center;
+overflow-x:hidden;
 }
 
 h1{
-    margin-top:70px;
-    font-size:50px;
-    color:#ff4d6d;
+margin-top:60px;
+font-size:55px;
+color:#ff5c8a;
+text-shadow:0 0 20px #ff5c8a;
 }
 
 p{
-    font-size:20px;
-    width:85%;
-    margin:auto;
-    line-height:35px;
+font-size:20px;
+line-height:35px;
+padding:0 20px;
 }
 
 .card{
-    background:#222;
-    width:90%;
-    max-width:600px;
-    margin:40px auto;
-    border-radius:20px;
-    padding:25px;
-    box-shadow:0 0 20px rgba(255,0,80,.4);
+background:rgba(255,255,255,0.08);
+backdrop-filter:blur(10px);
+border-radius:25px;
+padding:25px;
+margin:35px auto;
+width:85%;
+max-width:600px;
+box-shadow:0 0 30px rgba(255,80,150,.4);
 }
 
 button{
-    background:#ff4d6d;
-    color:white;
-    border:none;
-    padding:15px 35px;
-    font-size:18px;
-    border-radius:30px;
-    cursor:pointer;
+background:#ff4d88;
+border:none;
+color:white;
+padding:15px 30px;
+border-radius:30px;
+font-size:18px;
 }
 
-button:hover{
-    background:#ff6f91;
+.heart{
+position:fixed;
+bottom:-20px;
+font-size:25px;
+animation:up 8s linear infinite;
+}
+
+@keyframes up{
+from{transform:translateY(0);opacity:1;}
+to{transform:translateY(-110vh);opacity:0;}
+}
+
+.star{
+position:fixed;
+font-size:15px;
+animation:blink 3s infinite;
+}
+
+@keyframes blink{
+50%{opacity:.2;}
 }
 </style>
 
@@ -58,29 +77,55 @@ button:hover{
 
 <h1>❤️ SUDE ❤️</h1>
 
+<div class="card">
+<h2>✨ Sadece Senin İçin ✨</h2>
 <p>
-Bazı insanlar hayatımıza gelir ve her şeyi değiştirir...
-Bu sayfadaki her kelime ve her şarkı sadece senin için.
+Bazı insanlar hayatımıza girer ve her şeyi güzelleştirir...
+Bu sayfa sadece Sude için hazırlandı.
 </p>
+</div>
+
 
 <div class="card">
 <h2>💌 Sana Bir Not</h2>
-
 <p>
-Belki bütün hislerimi kelimeler anlatamaz.
-Ama umarım bu sayfa, sana ne kadar değer verdiğimi hissettirir.
-❤️
+Her şarkıda biraz seni, her güzel anda biraz seni buluyorum.
+Umarım bu küçük sayfa yüzünde bir gülümseme oluşturur. ❤️
 </p>
-
-<button onclick="alert('Seni gülümsetebildiysem ne mutlu bana. ❤️')">
-Bana Tıkla
-</button>
-<a href="https://open.spotify.com/playlist/3mfRoxPlQuxR2zzQYI03VC?si=cTXQXe42Q5OdlbSesMP_zQ&utm_source=copy-link&pi=Asvjhg2yTjeaa" target="_blank">
-<button>
-🎵 Sude'nin Şarkıları ❤️
-</button>
-</a>
 </div>
+
+
+<div class="card">
+<h2>🎵 Müziklerimiz</h2>
+
+<a href="https://open.spotify.com/playlist/3mfRoxPlQuxR2zzQYI03VC?si=cTXQXe42Q5OdlbSesMP_zQ&utm_source=copy-link&pi=Asvjhg2yTjeaa" target="_blank">
+
+<button>
+🎧 Sude'nin Şarkıları
+</button>
+
+</a>
+
+</div>
+
+
+<script>
+for(let i=0;i<25;i++){
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"%";
+h.style.animationDelay=Math.random()*8+"s";
+document.body.appendChild(h);
+
+let s=document.createElement("div");
+s.className="star";
+s.innerHTML="✨";
+s.style.left=Math.random()*100+"%";
+s.style.top=Math.random()*100+"%";
+document.body.appendChild(s);
+}
+</script>
 
 </body>
 </html>
