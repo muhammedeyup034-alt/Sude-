@@ -4,16 +4,12 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Bebegim ❤️</title>
+<title>Sude ❤️</title>
 
 <style>
-*{
-box-sizing:border-box;
-}
-
 body{
 margin:0;
-background:linear-gradient(180deg,#080014,#22002f);
+background:linear-gradient(#080014,#240033);
 color:white;
 font-family:Arial,sans-serif;
 text-align:center;
@@ -21,71 +17,52 @@ overflow-x:hidden;
 }
 
 h1{
-margin-top:50px;
 font-size:55px;
+margin-top:50px;
 color:#ff6b9d;
-text-shadow:0 0 25px #ff6b9d;
+text-shadow:0 0 20px #ff6b9d;
 }
 
-.subtitle{
-font-size:20px;
-opacity:.9;
-}
-
-.menu{
-margin:30px auto;
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
-gap:15px;
+.box{
+width:85%;
+max-width:500px;
+margin:25px auto;
+padding:25px;
+background:rgba(255,255,255,0.1);
+border-radius:25px;
+box-shadow:0 0 25px #ff4d88;
 }
 
 button{
 background:#ff4d88;
 color:white;
-border:none;
-padding:14px 25px;
+border:0;
+padding:14px 30px;
 border-radius:30px;
-font-size:17px;
-cursor:pointer;
-box-shadow:0 0 15px #ff4d88;
+font-size:18px;
 }
 
-button:hover{
-transform:scale(1.05);
-}
-
-.card{
-width:85%;
-max-width:600px;
-margin:25px auto;
-padding:25px;
-border-radius:25px;
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(10px);
-box-shadow:0 0 30px rgba(255,100,180,.3);
-}
-
-.hidden{
+.ic{
 display:none;
+margin-top:20px;
+}
+
+img{
+width:90%;
+border-radius:20px;
+margin:10px;
 }
 
 .heart{
 position:fixed;
-bottom:-30px;
-animation:kalp 8s linear infinite;
+bottom:-20px;
 font-size:25px;
+animation:kalp 8s linear infinite;
 }
 
 @keyframes kalp{
-0%{
-transform:translateY(0);
-opacity:1;
-}
-100%{
-transform:translateY(-110vh);
-opacity:0;
-}
+from{transform:translateY(0);}
+to{transform:translateY(-110vh);}
 }
 
 .star{
@@ -94,7 +71,7 @@ animation:yildiz 3s infinite;
 }
 
 @keyframes yildiz{
-50%{opacity:.3;}
+50%{opacity:0.3;}
 }
 
 </style>
@@ -103,71 +80,85 @@ animation:yildiz 3s infinite;
 
 <body>
 
-<h1>❤️ Sudemm Bebeğimmm❤️</h1>
+<h1>❤️ SUDE ❤️</h1>
 
-<p class="subtitle">
-Sadece senin için hazırlanmış küçük bir dünya ✨
+<p>
+Sadece senin için hazırlandı ✨
 </p>
 
 
-<div class="menu">
+<div class="box">
+
+<h2>💌 Sözler</h2>
 
 <button onclick="ac('soz')">
-💌 Sözler
+Aç
 </button>
 
-<button onclick="ac('muzik')">
-🎵 Müzik
-</button>
-
-<button onclick="ac('foto')">
-📸 Fotoğraflar
-</button>
-
-</div>
-
-
-
-<div id="soz" class="card">
-
-<h2>💌 Sana Bir Not</h2>
+<div id="soz" class="ic">
 
 <p>
-Bazı insanlar hayatımıza gelir ve her şeyi güzelleştirir.
-Bu sayfa Sude için özel olarak hazırlandı. ❤️
+Bazı insanlar hayatımıza girer ve her şeyi güzelleştirir.
+Sen de benim için çok özelsin ❤️
 </p>
 
 </div>
 
+</div>
 
 
-<div id="muzik" class="card hidden">
 
-<h2>🎵 Sude'nin Şarkıları</h2>
+<div class="box">
+
+<h2>🎵 Müzik</h2>
+
+<button onclick="ac('muzik')">
+Aç
+</button>
+
+<div id="muzik" class="ic">
 
 <p>
-Birlikte dinlemek için hazırladığım liste ❤️
+Sude'nin şarkıları 🎧
 </p>
 
 <a href="https://open.spotify.com/playlist/3mfRoxPlQuxR2zzQYI03VC?si=cTXQXe42Q5OdlbSesMP_zQ&utm_source=copy-link&pi=Asvjhg2yTjeaa" target="_blank">
 
 <button>
-Spotify Aç 🎧
+Spotify Aç
 </button>
 
 </a>
 
 </div>
 
+</div>
 
 
-<div id="foto" class="card hidden">
+
+<div class="box">
 
 <h2>📸 Fotoğraflar</h2>
 
+<button onclick="ac('foto')">
+Aç
+</button>
+
+<div id="foto" class="ic">
+
 <p>
-Buraya özel fotoğraflar eklenecek ❤️
+Fotoğraflar burada olacak ❤️
 </p>
+
+<p>Bizden güzel anılar ❤️</p>
+
+<img src="1783236982737.png">
+<img src="1783237527200.png">
+<img src="IMG_20260705_103059.jpg">
+<img src="IMG_20260705_103719.jpg">
+<img src="file_00000000ba3071f48af895807e23fbd7.png">
+
+</div>
 
 </div>
 
@@ -177,31 +168,33 @@ Buraya özel fotoğraflar eklenecek ❤️
 
 function ac(id){
 
-document.getElementById("soz").classList.add("hidden");
-document.getElementById("muzik").classList.add("hidden");
-document.getElementById("foto").classList.add("hidden");
+let bolumler=document.querySelectorAll(".ic");
 
-document.getElementById(id).classList.remove("hidden");
+bolumler.forEach(function(x){
+x.style.display="none";
+});
+
+document.getElementById(id).style.display="block";
 
 }
 
 
 for(let i=0;i<25;i++){
 
-let kalp=document.createElement("div");
-kalp.className="heart";
-kalp.innerHTML="❤️";
-kalp.style.left=Math.random()*100+"%";
-kalp.style.animationDelay=Math.random()*8+"s";
-document.body.appendChild(kalp);
+let h=document.createElement("div");
+h.className="heart";
+h.innerHTML="❤️";
+h.style.left=Math.random()*100+"%";
+h.style.animationDelay=Math.random()*8+"s";
+document.body.appendChild(h);
 
 
-let yildiz=document.createElement("div");
-yildiz.className="star";
-yildiz.innerHTML="✨";
-yildiz.style.left=Math.random()*100+"%";
-yildiz.style.top=Math.random()*100+"%";
-document.body.appendChild(yildiz);
+let s=document.createElement("div");
+s.className="star";
+s.innerHTML="✨";
+s.style.left=Math.random()*100+"%";
+s.style.top=Math.random()*100+"%";
+document.body.appendChild(s);
 
 }
 
